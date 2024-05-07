@@ -48,19 +48,34 @@ class TasksItemView(APIView):
             serializer = TaskItemSerializer(todos, many=True)
         return Response(serializer.data)
     
+    
     def post(self, request, format=None):
         serializer = TaskItemSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(author=request.user)
+            serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
          
-    def put(self, request, pk, format=None):
-        todo = Task.objects.get(pk=pk, author=request.user)
+    def put(self, request, pk=None, format=None):
+        if pk:
+            try:
+                todo = Task.objects.get(pk=pk)
+                serializer = TaskItemSerializer(todo, data=request.data)
+                if serializer.is_valid():
+                    serializer.save()
+                    return Response(serializer.data)
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            except Task.DoesNotExist:
+                raise NotFound(detail="Task not found", code=404)
+        else:
+            return Response({"message": "Missing task ID"}, status=status.HTTP_400_BAD_REQUEST)
+        """ todo = Task.objects.get(pk=pk)
         serializer = TaskItemSerializer(todo, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) """
 
     def delete(self, request, pk, format=None):
         todo = Task.objects.get(pk=pk, author=request.user)

@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.contrib.auth.models import User 
 from django.contrib.auth import authenticate
 from rest_framework import serializers
@@ -26,13 +27,20 @@ class EmailAuthTokenSerializer(serializers.Serializer):
     password = serializers.CharField()
 
     def validate(self, data):
-        # Versuche, den Benutzer anhand der E-Mail-Adresse zu finden
         user = authenticate(username=User.objects.get(email=data['email']).username, password=data['password'])
         if not user:
             raise serializers.ValidationError("Unable to log in with provided credentials.")
         return {'user': user}
     
+class DateOnlyField(serializers.Field):
+    def to_representation(self, value):
+        return value
+    
+    def to_internal_value(self, data):
+        return datetime.strptime(data, '%Y-%m-%d').date()
+    
 class TaskItemSerializer(serializers.ModelSerializer):
+    due_date = DateOnlyField()
     class Meta:
         model = Task
         fields = '__all__'
@@ -43,9 +51,11 @@ class TaskItemSerializer(serializers.ModelSerializer):
             title=validated_data['title'],
             description=validated_data['description'],
             due_date=validated_data['due_date'],
-            created_at=validated_data['created_at'],
             status=validated_data['status'],
-            user=self.context['request'].user  
+            category=validated_data['category'],
+            assignedTo=validated_data['assignedTo'],
+            bgcolor=validated_data['bgcolor'],
+            subtasks=validated_data['subtasks']
         )
         return taskslist
     
@@ -59,7 +69,8 @@ class ContactSerializer(serializers.ModelSerializer):
             name=validated_data['name'],
             surname=validated_data['surname'],
             email=validated_data['email'],
-            number=validated_data['number']
+            telefon=validated_data['telefon'],
+            bgcolor=validated_data['bgcolor']
         )
         return contact
     
