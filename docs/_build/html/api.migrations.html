@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>api.migrations package &mdash; join_backend  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            join_backend
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">api.migrations package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#api-migrations-0001-initial-module">api.migrations.0001_initial module</a></li>
+<li><a class="reference internal" href="#module-api.migrations.0002_remove_contact_user">api.migrations.0002_remove_contact_user module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0002_remove_contact_user.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0002_remove_contact_user.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0002_remove_contact_user.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0003_rename_first_name_contact_name_and_more">api.migrations.0003_rename_first_name_contact_name_and_more module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0003_rename_first_name_contact_name_and_more.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0003_rename_first_name_contact_name_and_more.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0003_rename_first_name_contact_name_and_more.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0004_rename_number_contact_telefon">api.migrations.0004_rename_number_contact_telefon module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0004_rename_number_contact_telefon.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0004_rename_number_contact_telefon.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0004_rename_number_contact_telefon.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0005_alter_contact_telefon">api.migrations.0005_alter_contact_telefon module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0005_alter_contact_telefon.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0005_alter_contact_telefon.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0005_alter_contact_telefon.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0006_alter_contact_telefon">api.migrations.0006_alter_contact_telefon module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0006_alter_contact_telefon.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0006_alter_contact_telefon.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0006_alter_contact_telefon.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0007_contact_bgcolor">api.migrations.0007_contact_bgcolor module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0007_contact_bgcolor.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0007_contact_bgcolor.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0007_contact_bgcolor.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0008_alter_contact_bgcolor">api.migrations.0008_alter_contact_bgcolor module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0008_alter_contact_bgcolor.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0008_alter_contact_bgcolor.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0008_alter_contact_bgcolor.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more">api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0010_remove_task_user">api.migrations.0010_remove_task_user module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0010_remove_task_user.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0010_remove_task_user.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0010_remove_task_user.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0011_alter_task_assignedto_alter_task_subtasks">api.migrations.0011_alter_task_assignedto_alter_task_subtasks module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0012_remove_task_created_at_alter_task_description">api.migrations.0012_remove_task_created_at_alter_task_description module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0012_remove_task_created_at_alter_task_description.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0012_remove_task_created_at_alter_task_description.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0012_remove_task_created_at_alter_task_description.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor">api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations.0014_alter_task_due_date">api.migrations.0014_alter_task_due_date module</a><ul>
+<li><a class="reference internal" href="#api.migrations.0014_alter_task_due_date.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li><a class="reference internal" href="#api.migrations.0014_alter_task_due_date.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li><a class="reference internal" href="#api.migrations.0014_alter_task_due_date.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-api.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">join_backend</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">api.migrations package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.migrations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-migrations-package">
+<h1>api.migrations package<a class="headerlink" href="#api-migrations-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="api-migrations-0001-initial-module">
+<h2>api.migrations.0001_initial module<a class="headerlink" href="#api-migrations-0001-initial-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-api.migrations.0002_remove_contact_user">
+<span id="api-migrations-0002-remove-contact-user-module"></span><h2>api.migrations.0002_remove_contact_user module<a class="headerlink" href="#module-api.migrations.0002_remove_contact_user" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0002_remove_contact_user.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0002_remove_contact_user.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0002_remove_contact_user.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0002_remove_contact_user.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0001_initial')]</span></em><a class="headerlink" href="#api.migrations.0002_remove_contact_user.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0002_remove_contact_user.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RemoveField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">name='user'&gt;]</span></em><a class="headerlink" href="#api.migrations.0002_remove_contact_user.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0003_rename_first_name_contact_name_and_more">
+<span id="api-migrations-0003-rename-first-name-contact-name-and-more-module"></span><h2>api.migrations.0003_rename_first_name_contact_name_and_more module<a class="headerlink" href="#module-api.migrations.0003_rename_first_name_contact_name_and_more" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0003_rename_first_name_contact_name_and_more.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0003_rename_first_name_contact_name_and_more.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0003_rename_first_name_contact_name_and_more.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0003_rename_first_name_contact_name_and_more.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0002_remove_contact_user')]</span></em><a class="headerlink" href="#api.migrations.0003_rename_first_name_contact_name_and_more.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0003_rename_first_name_contact_name_and_more.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">old_name='first_name',</span> <span class="pre">new_name='name'&gt;,</span> <span class="pre">&lt;RenameField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">old_name='last_name',</span> <span class="pre">new_name='surname'&gt;]</span></em><a class="headerlink" href="#api.migrations.0003_rename_first_name_contact_name_and_more.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0004_rename_number_contact_telefon">
+<span id="api-migrations-0004-rename-number-contact-telefon-module"></span><h2>api.migrations.0004_rename_number_contact_telefon module<a class="headerlink" href="#module-api.migrations.0004_rename_number_contact_telefon" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0004_rename_number_contact_telefon.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0004_rename_number_contact_telefon.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0004_rename_number_contact_telefon.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0004_rename_number_contact_telefon.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0003_rename_first_name_contact_name_and_more')]</span></em><a class="headerlink" href="#api.migrations.0004_rename_number_contact_telefon.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0004_rename_number_contact_telefon.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RenameField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">old_name='number',</span> <span class="pre">new_name='telefon'&gt;]</span></em><a class="headerlink" href="#api.migrations.0004_rename_number_contact_telefon.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0005_alter_contact_telefon">
+<span id="api-migrations-0005-alter-contact-telefon-module"></span><h2>api.migrations.0005_alter_contact_telefon module<a class="headerlink" href="#module-api.migrations.0005_alter_contact_telefon" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0005_alter_contact_telefon.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0005_alter_contact_telefon.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0005_alter_contact_telefon.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0005_alter_contact_telefon.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0004_rename_number_contact_telefon')]</span></em><a class="headerlink" href="#api.migrations.0005_alter_contact_telefon.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0005_alter_contact_telefon.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">name='telefon',</span> <span class="pre">field=&lt;django.db.models.fields.IntegerField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0005_alter_contact_telefon.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0006_alter_contact_telefon">
+<span id="api-migrations-0006-alter-contact-telefon-module"></span><h2>api.migrations.0006_alter_contact_telefon module<a class="headerlink" href="#module-api.migrations.0006_alter_contact_telefon" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0006_alter_contact_telefon.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0006_alter_contact_telefon.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0006_alter_contact_telefon.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0006_alter_contact_telefon.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0005_alter_contact_telefon')]</span></em><a class="headerlink" href="#api.migrations.0006_alter_contact_telefon.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0006_alter_contact_telefon.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">name='telefon',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0006_alter_contact_telefon.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0007_contact_bgcolor">
+<span id="api-migrations-0007-contact-bgcolor-module"></span><h2>api.migrations.0007_contact_bgcolor module<a class="headerlink" href="#module-api.migrations.0007_contact_bgcolor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0007_contact_bgcolor.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0007_contact_bgcolor.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0007_contact_bgcolor.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0007_contact_bgcolor.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0006_alter_contact_telefon')]</span></em><a class="headerlink" href="#api.migrations.0007_contact_bgcolor.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0007_contact_bgcolor.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">name='bgcolor',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0007_contact_bgcolor.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0008_alter_contact_bgcolor">
+<span id="api-migrations-0008-alter-contact-bgcolor-module"></span><h2>api.migrations.0008_alter_contact_bgcolor module<a class="headerlink" href="#module-api.migrations.0008_alter_contact_bgcolor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0008_alter_contact_bgcolor.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0008_alter_contact_bgcolor.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0008_alter_contact_bgcolor.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0008_alter_contact_bgcolor.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0007_contact_bgcolor')]</span></em><a class="headerlink" href="#api.migrations.0008_alter_contact_bgcolor.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0008_alter_contact_bgcolor.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">name='bgcolor',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0008_alter_contact_bgcolor.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more">
+<span id="api-migrations-0009-task-assignedto-task-bgcolor-task-category-and-more-module"></span><h2>api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more module<a class="headerlink" href="#module-api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0008_alter_contact_bgcolor')]</span></em><a class="headerlink" href="#api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='assignedTo',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;,</span> <span class="pre">&lt;AddField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='bgcolor',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;,</span> <span class="pre">&lt;AddField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='category',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;,</span> <span class="pre">&lt;AddField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='subtasks',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='priority',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0009_task_assignedto_task_bgcolor_task_category_and_more.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0010_remove_task_user">
+<span id="api-migrations-0010-remove-task-user-module"></span><h2>api.migrations.0010_remove_task_user module<a class="headerlink" href="#module-api.migrations.0010_remove_task_user" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0010_remove_task_user.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0010_remove_task_user.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0010_remove_task_user.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0010_remove_task_user.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0009_task_assignedto_task_bgcolor_task_category_and_more')]</span></em><a class="headerlink" href="#api.migrations.0010_remove_task_user.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0010_remove_task_user.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RemoveField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='user'&gt;]</span></em><a class="headerlink" href="#api.migrations.0010_remove_task_user.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0011_alter_task_assignedto_alter_task_subtasks">
+<span id="api-migrations-0011-alter-task-assignedto-alter-task-subtasks-module"></span><h2>api.migrations.0011_alter_task_assignedto_alter_task_subtasks module<a class="headerlink" href="#module-api.migrations.0011_alter_task_assignedto_alter_task_subtasks" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0011_alter_task_assignedto_alter_task_subtasks.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0010_remove_task_user')]</span></em><a class="headerlink" href="#api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='assignedTo',</span> <span class="pre">field=&lt;django.db.models.fields.json.JSONField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='subtasks',</span> <span class="pre">field=&lt;django.db.models.fields.json.JSONField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0011_alter_task_assignedto_alter_task_subtasks.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0012_remove_task_created_at_alter_task_description">
+<span id="api-migrations-0012-remove-task-created-at-alter-task-description-module"></span><h2>api.migrations.0012_remove_task_created_at_alter_task_description module<a class="headerlink" href="#module-api.migrations.0012_remove_task_created_at_alter_task_description" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0012_remove_task_created_at_alter_task_description.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0012_remove_task_created_at_alter_task_description.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0012_remove_task_created_at_alter_task_description.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0012_remove_task_created_at_alter_task_description.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0011_alter_task_assignedto_alter_task_subtasks')]</span></em><a class="headerlink" href="#api.migrations.0012_remove_task_created_at_alter_task_description.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0012_remove_task_created_at_alter_task_description.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;RemoveField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='created_at'&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='description',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0012_remove_task_created_at_alter_task_description.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor">
+<span id="api-migrations-0013-alter-contact-bgcolor-alter-task-bgcolor-module"></span><h2>api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor module<a class="headerlink" href="#module-api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0012_remove_task_created_at_alter_task_description')]</span></em><a class="headerlink" href="#api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='contact',</span> <span class="pre">name='bgcolor',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='bgcolor',</span> <span class="pre">field=&lt;django.db.models.fields.json.JSONField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0013_alter_contact_bgcolor_alter_task_bgcolor.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations.0014_alter_task_due_date">
+<span id="api-migrations-0014-alter-task-due-date-module"></span><h2>api.migrations.0014_alter_task_due_date module<a class="headerlink" href="#module-api.migrations.0014_alter_task_due_date" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.migrations.0014_alter_task_due_date.Migration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.migrations.0014_alter_task_due_date.</span></span><span class="sig-name descname"><span class="pre">Migration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.migrations.0014_alter_task_due_date.Migration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Migration</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0014_alter_task_due_date.Migration.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('api',</span> <span class="pre">'0013_alter_contact_bgcolor_alter_task_bgcolor')]</span></em><a class="headerlink" href="#api.migrations.0014_alter_task_due_date.Migration.dependencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.migrations.0014_alter_task_due_date.Migration.operations">
+<span class="sig-name descname"><span class="pre">operations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='task',</span> <span class="pre">name='due_date',</span> <span class="pre">field=&lt;django.db.models.fields.DateField&gt;&gt;]</span></em><a class="headerlink" href="#api.migrations.0014_alter_task_due_date.Migration.operations" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-api.migrations" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Igor Stoleski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
