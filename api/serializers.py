@@ -63,9 +63,14 @@ class EmailAuthTokenSerializer(serializers.Serializer):
         Raises:
             serializers.ValidationError: If provided credentials are invalid.
         """
-        user = authenticate(username=User.objects.get(email=data['email']).username, password=data['password'])
+        user = User.objects.filter(email=data['email']).first()
         if not user:
-            raise serializers.ValidationError("Unable to log in with provided credentials.")
+            raise serializers.ValidationError({'non_field_errors': ['User does not exist.']})
+        
+        user = authenticate(username=user.username, password=data['password'])
+        if not user:
+            raise serializers.ValidationError({'non_field_errors': ['Unable to log in with provided credentials.']})
+
         return {'user': user}
     
 class DateOnlyField(serializers.Field):
