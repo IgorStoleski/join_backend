@@ -30,11 +30,18 @@ class UserView(APIView):
             Response: A Django Rest Framework response object with the created user data and HTTP 201 Created status on success.
             If the data is invalid, returns a response with error details and HTTP 400 Bad Request status.
         """
+        """ serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) """
+        print("Incoming request data:", request.data)  # Debug-Log
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        print("Serializer errors:", serializer.errors)  # Debug-Log
+        return Response({'success': False, 'message': 'Validation errors', 'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request, pk=None, format=None):
         """
