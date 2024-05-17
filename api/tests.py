@@ -314,6 +314,7 @@ class ContactViewTests(TestCase):
         response = self.client.put(self.contact_detail_url(self.contact.pk), updated_data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['name'], updated_data['name'])
+        self.assertEqual(response.data['surname'], updated_data['surname'])
         self.assertEqual(response.data['email'], updated_data['email'])
         self.assertEqual(response.data['telefon'], updated_data['telefon'])
 
