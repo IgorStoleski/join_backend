@@ -23,6 +23,7 @@ class UserViewTests(TestCase):
         url = reverse('user-list')
         data = {
             'username': 'newuser', 
+            'firt_name': 'newuser_firstname', 
             'last_name': 'newuser_lastname', 
             'password': 'newpassword', 
             'email': 'test@mail.de'
